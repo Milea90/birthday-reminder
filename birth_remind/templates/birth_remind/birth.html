@@ -6,7 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body>
-    <h1>Welcome To Your Personal Birthday Reminder</h1>
+    <h1>Welcome To Your Personal Birthday Reminder Calendar!</h1>
+    <table>
+      {% for item in items %}
+      <tr>
+        {% if item.done %}
+        <td><strike>{{ item.name }}</strike></td>
+        {% else %}
+        <td>{{ item.name }}</td>
+        {% endif %}
+
+        <td>{{ item.name }}</td>
+        <td>{{ item.done }}</td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td>
+          Please add upcoming birthdays to your personal birthday
+          reminder-calendar!
+        </td>
+      </tr>
+
+      {% endfor %}
+    </table>
+    <a href="/add">Add Upcoming Birthdays</a>
   </body>
 </html>
