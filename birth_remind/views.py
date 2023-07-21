@@ -14,6 +14,7 @@ def get_birth(request):
 
     return render(request, 'birth_remind/birth.html', context)
 
-    def add_birth(request):
+
+def add_birth(request):
 
     return render(request, 'birth_remind/add_birthdays.html')
