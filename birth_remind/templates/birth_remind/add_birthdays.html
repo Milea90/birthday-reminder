@@ -13,13 +13,13 @@
 
     <form method="POST" action="add">
         {% csrf_token %}
-        {{ form }}
+        {{ form.as_p }}
 
 
 
         <div>
             <p>
-                <button type="submit">Add Item</button>
+                <button type="submit">Add A Birthday</button>
             </p>
         </div>
     </form>

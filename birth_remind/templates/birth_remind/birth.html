@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <h1>Welcome To Your Personal Birthday Reminder Calendar!</h1>
     <table>
-      {% for item in items %}
-      <tr>
-        {% if item.done %}
-        <td><strike>{{ item.name }}</strike></td>
-        {% else %}
-        <td>{{ item.name }}</td>
-        {% endif %}
+        {% for item in items %}
+        <tr>
+            {% if item.done %}
+            <td><strike>{{ item.name }}</strike></td>
+            {% else %}
+            <td>{{ item.name }}</td>
+            {% endif %}
+            <td>
+                <a href="/edit/{{ item.id }}">
+                    <button>Edit</button>
+                </a>
+            </td>
+        </tr>
 
-        <td>{{ item.name }}</td>
-        <td>{{ item.done }}</td>
-      </tr>
-      {% empty %}
-      <tr>
-        <td>
-          Please add upcoming birthdays to your personal birthday
-          reminder-calendar!
-        </td>
-      </tr>
+        {% empty %}
+        <tr>
+            <td>
+                Please add upcoming birthdays to your personal birthday
+                reminder-calendar!
+            </td>
+        </tr>
 
-      {% endfor %}
+        {% endfor %}
     </table>
     <a href="/add">Add Upcoming Birthdays</a>
-  </body>
+</body>
+
 </html>

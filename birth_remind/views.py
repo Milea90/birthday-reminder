@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Item
 from .forms import ItemForm
 
@@ -23,9 +23,24 @@ def add_birth(request):
             form.save()
             return redirect('get_birth')
 
-        form = ItemForm()
-        context = {
-            'form': form
-        }
+    form = ItemForm()
+    context = {
+        'form': form
+    }
 
-    return render(request, 'birth_remind/add_birthdays.html')
+    return render(request, 'birth_remind/add_birthdays.html', context)
+
+
+def edit_birth(request, item_id):
+    item = get_object_or_404(Item, id=item_id)
+    if request.method == 'POST':
+        form = ItemForm(request.POST, instance=item)
+        if form.is_valid():
+            form.save()
+            return redirect('get_birth')
+    form = ItemForm(instance=item)
+    context = {
+        'form': form
+    }
+
+    return render(request, 'birth_remind/edit_birthdays.html', context)

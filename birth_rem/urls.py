@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from birth_remind.views import get_birth, add_birth
+from birth_remind.views import get_birth, add_birth, edit_birth
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', get_birth, name='get_birth'),
-    path('add', add_birth, name='add')
+    path('add', add_birth, name='add'),
+    path('edit/<item_id>', edit_birth, name='edit'),
+
 ]
