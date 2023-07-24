@@ -1,1 +1,1 @@
-web: gunicorn birthday-reminder.wsgi
+web: gunicorn birth_rem.wsgi
