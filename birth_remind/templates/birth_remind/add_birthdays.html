@@ -5,27 +5,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Birthdays Calendar</title>
 </head>
 
 <body>
+
+    <!--A form to submit birthdays-->
     <h1>Add Upcoming Birthdays!</h1>
 
-    <form method="POST" action="add">
+    <form method="POST" action="add" aria-label="Add birthdays using this form">
         {% csrf_token %}
         {{ form.as_p }}
 
 
-
-        <div>
+<!-- A button to submit the birthdays-->
+        <div class="buttons">
             <p>
-                <button type="submit">Add A Birthday</button>
+                <button type="submit" aria-label="Click here to submit">Add A Birthday</button>
             </p>
         </div>
     </form>
 
-
-
 </body>
-
 </html>
