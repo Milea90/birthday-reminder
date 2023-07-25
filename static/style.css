@@ -2,7 +2,7 @@
 body {background-color: lightpink;}
 
 /*Giving the headings a nice color*/
-h1 {color:cornflowerblue}
+h1, h3 {color:cornflowerblue}
 
 /*Styling the buttons*/
 .buttons {
