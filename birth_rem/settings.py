@@ -30,7 +30,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'birthdays-reminder-calendar-1c02da9b1b9c.herokuapp.com', 'localhost', '8000-milea90-birthday-reminde-2wrvc7kfe9.us2.codeanyapp.com']
