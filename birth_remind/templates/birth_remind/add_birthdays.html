@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Birthdays Calendar</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
@@ -18,7 +21,7 @@
         {{ form.as_p }}
 
 
-<!-- A button to submit the birthdays-->
+        <!-- A button to submit the birthdays-->
         <div class="buttons">
             <p>
                 <button type="submit" aria-label="Click here to submit">Add A Birthday</button>
@@ -27,4 +30,5 @@
     </form>
 
 </body>
+
 </html>

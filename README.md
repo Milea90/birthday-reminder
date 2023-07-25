@@ -1,39 +1,46 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Birthday reminder
+This is a webbsite where users can keep track of upcoming birthdays. 
 
-Welcome,
+## UX design
+The UX design for this project had to be very simple and neutral. At the same time, I wanted it to have colors that would not be boring, but not too crazy either.
 
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **May 11th, 2023**
+## Features
 
-## Codeanywhere Reminders
+### Implemented features
+The user are able to add upcoming birthdays as well as edit them and delete them.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+### Features left to implement
+The user should be able to register and log in to an account. This is yet to be implementet. They will also get a message whenever they take an action, for example deleting an item, to make sure they do not do anything they do not want, as well as enhancing the user experience. I also wanted to add a code to make the birthdays appear at the top of the page with the birthdays closest to a now-date on top.
 
-`python3 -m http.server`
+Note: In the readme there should also be images of the testing and features.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## Technologies used
+The technologies used are: html, css, python, django, git, github, heruko, elephantSQL, lighthouse, pep8.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+## Testing
 
-`http_server`
+### Bugs - fixed
+1. I got an issue with my workspace saying that it had to be rebuild. And all of a sudden, my Django installations did not work at all. So I had ro rebuid it, and by doing so, I lost a lot of time and code in the process. Both of them have resultet in me not being able to finish the project on time and meeting all the criteria. I have contaced student about this to ask for a later submission date, but I have yet not gotten any response. So in order to not get the project labelled as a late submission, I chose to submit it with all its imperfections. The bug was apperently easy to fix, All I had to do in order to get my Django back was to reinstall my dependencies. With the help pf tutor, this was an easy fix.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+2. When creating the templates, I got a lot of url-errors. To fix this, I read where the errors where coming from and fixed them by doing so. Most of the time I was able to fix them by reading the error messages, when that did not work, I googled, and when that did not work I contacted tutor. These errors have been very common for this project and have cost me a lot of time to troubleshoot. I did not expect so many errors.
+3. I have had a lot of syntax errors, mostly due to indentations. These has also cost me a lot of time to fix since the errors were not very clear a lot of the times.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+4. When creating the forms, I got double inputs when testing it and adding content to it. It turned out that I had some extra lines of code that were creating this issue, so I just deleted them.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Bugs - unfixed 
+1. I still have a lot of features and bugs to fix. These include the styling as well as the main features such as registration and log in account. 
 
-To log into the Heroku toolbelt CLI:
+2. I was not able to get rid of the name for the input field. When doing so, it resulted in a lot of errors which just made me confused. So I had to let it be in order to keep the productivity going.
+3. I tried to change the names for some of the class names and so on in order for them to fit my project better, but the same thing happened as to the name problem. The code just resulted in a lot of errors, which made me panic a bit.
+4. When trying to style the buttons, I could not make it look right. And I had no time to fix it.
+5. When creating the readme, I could not get the images to load properly.
+   
+## Testing
+For testing I have checked the pep8, lighthouse and used developer tool to check for the responsiveness. 
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Deployment
+Go to heruko.com. Login / create an account. Click on the tab deploy. Choose depoy with github. Scroll down and search for this repository and click connect. Choose deploy from branch (main) and when its done loading, click view.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+## References
+For creating the backend, I used the code from Hello Django. 

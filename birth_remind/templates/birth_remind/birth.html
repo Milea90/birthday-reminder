@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,13 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Birthday reminder calendar</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
 
     <h1>Welcome To Your Personal Birthday Reminder Calendar!</h1>
 
-<!--A list of items/birthdays that was added by user-->
+    <!--A list of items/birthdays that was added by user-->
     <table>
         {% for item in items %}
         <tr>
@@ -25,19 +28,19 @@
 
                 <!--A button to edit items/birthdays-->
                 <div id="edit-button">
-                <a href="/edit/{{ item.id }}">
-    
-                    <button aria-label="Click here to edit.">Edit</button>
-                </a>
+                    <a href="/edit/{{ item.id }}">
+
+                        <button aria-label="Click here to edit.">Edit</button>
+                    </a>
                 </div>
             </td>
 
-                <!--A button to delete items/birthdays-->
+            <!--A button to delete items/birthdays-->
             <td>
                 <div id="delete-button">
-                <a href="/delete/{{ item.id }}">
-                    <button aria-label="Click here to delete.">Delete</button>
-                </a>
+                    <a href="/delete/{{ item.id }}">
+                        <button aria-label="Click here to delete.">Delete</button>
+                    </a>
                 </div>
             </td>
 
@@ -47,7 +50,7 @@
         <tr>
             <td>
                 <h3>Please add upcoming birthdays to your personal birthday
-                reminder-calendar!</h3>
+                    reminder-calendar!</h3>
             </td>
         </tr>
 
@@ -57,10 +60,11 @@
 
     <!--A button to add birthdays-->
     <div class="buttons">
-    <button>
-    <a href="/add" aria-label="A clickable button to an edit-page where you can add birthdays.">Add Upcoming
-         Birthdays</a>
-    </button>
+        <button>
+            <a href="/add" aria-label="A clickable button to an edit-page where you can add birthdays.">Add Upcoming
+                Birthdays</a>
+        </button>
     </div>
 </body>
+
 </html>

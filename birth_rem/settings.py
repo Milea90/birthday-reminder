@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'birthdays-reminder-calendar-1c02da9b1b9c.herokuapp.com', 'localhost']
+    'birthdays-reminder-calendar-1c02da9b1b9c.herokuapp.com', 'localhost', '8000-milea90-birthday-reminde-2wrvc7kfe9.us2.codeanyapp.com']
 
 
 # Application definition
